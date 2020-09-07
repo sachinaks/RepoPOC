@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title = "Select Ojbect Name">
+    <div class="slds-m-around_medium">
+        <div class="slds-m-around_medium">
+           
+                <template for:each={accounts} for:item="account">
+                    <p key={account.Id}>{account.Name}</p>
+                </template>
+           
+          
+        </div>
+    <!-- <p>Selected value is: {value}</p> -->
+    </div>
+    <div>
+        <lightning-combobox
+            name="objectname"
+            label="Object List"
+            value={value}
+            placeholder="Select Object"
+            options={objdata}
+            onchange={handleChange} ></lightning-combobox>
+
+       
+    </div>
+</lightning-card>
+    </template>
